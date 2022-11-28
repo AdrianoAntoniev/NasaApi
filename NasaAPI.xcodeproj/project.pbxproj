@@ -11,7 +11,10 @@
 		D7339626292F1C96003CDADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7339625292F1C96003CDADC /* ContentView.swift */; };
 		D7339628292F1C98003CDADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7339627292F1C98003CDADC /* Assets.xcassets */; };
 		D733962B292F1C98003CDADC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D733962A292F1C98003CDADC /* Preview Assets.xcassets */; };
-		D7339632292F1CAB003CDADC /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7339631292F1CAB003CDADC /* CONSTANTS.swift */; };
+		D7339632292F1CAB003CDADC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7339631292F1CAB003CDADC /* Constants.swift */; };
+		D7339636292F1E75003CDADC /* PictureOfDayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7339635292F1E75003CDADC /* PictureOfDayDataModel.swift */; };
+		D7339639292F1FB5003CDADC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7339638292F1FB5003CDADC /* NetworkManager.swift */; };
+		D7F365FA293432BB00EE5408 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F365F9293432BA00EE5408 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +23,10 @@
 		D7339625292F1C96003CDADC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7339627292F1C98003CDADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D733962A292F1C98003CDADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D7339631292F1CAB003CDADC /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
+		D7339631292F1CAB003CDADC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D7339635292F1E75003CDADC /* PictureOfDayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfDayDataModel.swift; sourceTree = "<group>"; };
+		D7339638292F1FB5003CDADC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D7F365F9293432BA00EE5408 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +59,14 @@
 		D7339622292F1C96003CDADC /* NasaAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D7339637292F1FA2003CDADC /* Network */,
+				D7339634292F1E5D003CDADC /* Models */,
 				D7339623292F1C96003CDADC /* NasaAPIApp.swift */,
 				D7339625292F1C96003CDADC /* ContentView.swift */,
+				D7F365F9293432BA00EE5408 /* ImageView.swift */,
 				D7339627292F1C98003CDADC /* Assets.xcassets */,
 				D7339629292F1C98003CDADC /* Preview Content */,
-				D7339631292F1CAB003CDADC /* CONSTANTS.swift */,
+				D7339633292F1E4A003CDADC /* SupportingFiles */,
 			);
 			path = NasaAPI;
 			sourceTree = "<group>";
@@ -68,6 +77,38 @@
 				D733962A292F1C98003CDADC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7339633292F1E4A003CDADC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D7F365F429342B7B00EE5408 /* Extensions */,
+				D7339631292F1CAB003CDADC /* Constants.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D7339634292F1E5D003CDADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7339635292F1E75003CDADC /* PictureOfDayDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7339637292F1FA2003CDADC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D7339638292F1FB5003CDADC /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D7F365F429342B7B00EE5408 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7339636292F1E75003CDADC /* PictureOfDayDataModel.swift in Sources */,
+				D7F365FA293432BB00EE5408 /* ImageView.swift in Sources */,
 				D7339626292F1C96003CDADC /* ContentView.swift in Sources */,
-				D7339632292F1CAB003CDADC /* CONSTANTS.swift in Sources */,
+				D7339639292F1FB5003CDADC /* NetworkManager.swift in Sources */,
+				D7339632292F1CAB003CDADC /* Constants.swift in Sources */,
 				D7339624292F1C96003CDADC /* NasaAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

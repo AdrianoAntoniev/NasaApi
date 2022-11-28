@@ -8,15 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var data: PictureOfDayDataModel? = nil
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                Text(data?.title ?? "")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
+                ImageView(urlString: data?.url ?? "")
+                    .padding(.all)
+                Text(data?.explanation ?? "")
+                    .padding(.horizontal)
+            }
+            .padding(.all)
+            .onAppear {
+                NetworkManager().getData { result in
+                    switch result {
+                    case .success(let data):
+                        self.data = data
+                        print(data)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            }
         }
-        .padding()
-    }
+    }    
 }
 
 struct ContentView_Previews: PreviewProvider {
